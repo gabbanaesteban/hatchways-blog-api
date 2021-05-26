@@ -1,6 +1,6 @@
 "use strict"
 
-const { BadRequest } = require("http-errors")
+const httpErrors = require("http-errors")
 
 async function validateParams(params, schema, validationOptions = {}) {
   const options = {
@@ -14,7 +14,7 @@ async function validateParams(params, schema, validationOptions = {}) {
     return validatedParams
   } catch (validationError) {
     const [errorMessage] = validationError.errors
-    throw new BadRequest(errorMessage)
+    throw new httpErrors.BadRequest(errorMessage)
   }
 }
 

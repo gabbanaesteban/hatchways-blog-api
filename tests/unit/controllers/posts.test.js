@@ -5,7 +5,7 @@ const postsController = require("../../../api/controllers/posts")
 const helpers = require("../../../api/utils/helpers")
 const { getPostsSchema } = require("../../../api/schemas/posts")
 
-describe("posts", () => {
+describe("posts.js", () => {
   let validateParamsSpy
   let res
 
@@ -14,7 +14,7 @@ describe("posts", () => {
     validateParamsSpy = jest.spyOn(helpers, "validateParams")
   })
 
-  describe("getPosts", () => {
+  describe("getPosts()", () => {
     let tags
     let sortBy
     let direction

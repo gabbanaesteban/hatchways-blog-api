@@ -2,7 +2,7 @@
 
 const util = require("util")
 const axios = require("axios")
-const { getCache } = require("../utils/cache")
+const cache = require("../utils/cache")
 
 const API_URL = "https://api.hatchways.io/assessment/blog/posts?tag=%s"
 const ONE_HOUR_IN_SECONDS = 3600
@@ -32,7 +32,7 @@ async function getBlogPosts(tag, options = {}) {
  * @return {Array<Object>}
  */
 function _getBlogPostsFromCache(tag) {
-  const posts = getCache().get(tag)
+  const posts = cache.getCache().get(tag)
 
   if (posts) {
     return posts
@@ -47,7 +47,7 @@ function _getBlogPostsFromCache(tag) {
  */
 function _addBlogPostsToCache(tag, posts) {
   // As there is not max-age or Expires Header from hatchways API, we will use 1 hour as TTL
-  return getCache().set(tag, posts, ONE_HOUR_IN_SECONDS)
+  return cache.getCache().set(tag, posts, ONE_HOUR_IN_SECONDS)
 }
 
 const API = {

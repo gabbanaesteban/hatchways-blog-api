@@ -3,7 +3,7 @@
 const { getPostsSchema } = require("../../../api/schemas/posts")
 const { validateParams } = require("../../../api/utils/helpers")
 
-describe("posts", () => {
+describe("posts.js", () => {
   describe("getPostsSchema", () => {
     let params
 

@@ -1,7 +1,7 @@
 "use strict"
 
 const { uniq, uniqBy, flatten, orderBy } = require("lodash")
-const { getBlogPosts } = require("./hatchways")
+const hatchways = require("./hatchways")
 
 /**
  * @param {string} tagsAsString
@@ -22,7 +22,7 @@ async function getPosts(tagsAsString, sortBy, direction) {
  * @returns {Promise<{Array<Object>}>}
  */
 async function _aggregatePosts(tags) {
-  const promises = tags.map((tag) => getBlogPosts(tag, { useCache: true }))
+  const promises = tags.map((tag) => hatchways.getBlogPosts(tag, { useCache: true }))
   const posts = await Promise.all(promises)
 
   return flatten(posts)
