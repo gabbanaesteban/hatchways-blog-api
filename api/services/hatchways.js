@@ -46,7 +46,7 @@ function _getBlogPostsFromCache(tag) {
  * @param {Array<Object>} posts
  */
 function _addBlogPostsToCache(tag, posts) {
-  // As there is not max-age or Expires Header, we will use 1 hour as TTL
+  // As there is not max-age or Expires Header from hatchways API, we will use 1 hour as TTL
   return getCache().set(tag, posts, ONE_HOUR_IN_SECONDS)
 }
 
