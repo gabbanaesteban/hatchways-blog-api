@@ -1,11 +1,13 @@
 "use strict"
 
+const asyncHandler = require("express-async-handler")
+
 const { getPostsSchema } = require("../schemas/posts")
-const { validateParams } = require("../utils/helpers")
+const helpers = require("../utils/helpers")
 const postsService = require("../services/posts")
 
 async function getPosts(req, res) {
-  const { tags, sortBy, direction } = await validateParams(
+  const { tags, sortBy, direction } = await helpers.validateParams(
     req.query,
     getPostsSchema
   )
@@ -14,7 +16,7 @@ async function getPosts(req, res) {
 }
 
 const API = {
-  getPosts,
+  getPosts: asyncHandler(getPosts),
 }
 
 module.exports = API
