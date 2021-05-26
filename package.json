@@ -9,7 +9,8 @@
     "test:jest": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "lint": "eslint . --cache --fix"
+    "lint": "eslint . --cache --fix",
+    "format": "prettier --loglevel warn --write \"**/*.{js,css,md}\""
   },
   "author": "Esteban De la Rosa <gabbanaesteban@gmail.com>",
   "dependencies": {
@@ -19,14 +20,16 @@
     "helmet": "^4.6.0",
     "http-errors": "^1.8.0",
     "lodash": "^4.17.21",
-    "morgan": "^1.10.0",
     "node-cache": "^5.1.2",
     "yup": "^0.32.9"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.23",
     "eslint": "^7.27.0",
+    "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-node": "^11.1.0",
     "esmon": "^1.0.3",
-    "jest": "^27.0.1"
+    "jest": "^27.0.1",
+    "supertest": "^6.1.3"
   }
 }

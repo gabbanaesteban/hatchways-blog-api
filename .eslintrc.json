@@ -1,8 +1,8 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:node/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:node/recommended", "plugin:jest/recommended"],
+  "env": {
+    "jest/globals": true
+  },
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2020
