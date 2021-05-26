@@ -1,7 +1,7 @@
 "use strict"
 
 const request = require("supertest")
-const app = require("../../app")
+const app = require("../../api/app")
 
 describe("GET /api/ping", () => {
   test("should return with success", async () => {

@@ -58,7 +58,6 @@ describe("hatchways.js", () => {
 
         service._getBlogPostsFromCache(tag)
 
-        console.log({ mock: getCacheSpy.mock })
         expect(getCacheSpy.mock.results[0].value.get).toBeCalledTimes(1)
         expect(getBlogPostsSpy).toBeCalledTimes(1)
         expect(getBlogPostsSpy).toBeCalledWith(tag, { useCache: false })

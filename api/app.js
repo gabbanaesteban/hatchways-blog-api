@@ -3,7 +3,7 @@
 const express = require("express")
 const helmet = require("helmet")
 
-const router = require("./api/routes/router")
+const router = require("./routes/router")
 
 const app = express()
 
