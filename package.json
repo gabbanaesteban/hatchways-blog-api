@@ -1,0 +1,31 @@
+{
+  "name": "hatchways-backend-assessment",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "npm run test:jest --",
+    "test:jest": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint . --cache --fix"
+  },
+  "author": "Esteban De la Rosa <gabbanaesteban@gmail.com>",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "helmet": "^4.6.0",
+    "http-errors": "^1.8.0",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-plugin-node": "^11.1.0",
+    "esmon": "^1.0.3",
+    "jest": "^27.0.1"
+  }
+}
