@@ -3,7 +3,11 @@
   "engines": {
     "node": "14.x"
   },
+  "files": [
+    "src"
+  ],
   "scripts": {
+    "start": "node api/server.js",
     "pretest": "npm run lint",
     "test": "npm run test:jest --",
     "test:jest": "jest",
