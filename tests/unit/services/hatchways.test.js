@@ -1,8 +1,8 @@
 "use strict"
 
 const axios = require("axios")
-const cache = require("../../../api/utils/cache")
-const service = require("../../../api/services/hatchways")
+const cache = require("../../../src/utils/cache")
+const service = require("../../../src/services/hatchways")
 
 describe("hatchways.js", () => {
   let tag

@@ -1,9 +1,9 @@
 "use strict"
 
-const postsService = require("../../../api/services/posts")
-const postsController = require("../../../api/controllers/posts")
-const helpers = require("../../../api/utils/helpers")
-const { getPostsSchema } = require("../../../api/schemas/posts")
+const postsService = require("../../../src/services/posts")
+const postsController = require("../../../src/controllers/posts")
+const helpers = require("../../../src/utils/helpers")
+const { getPostsSchema } = require("../../../src/schemas/posts")
 
 describe("posts.js", () => {
   let validateParamsSpy
