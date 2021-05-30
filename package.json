@@ -7,7 +7,7 @@
     "src"
   ],
   "scripts": {
-    "start": "node api/server.js",
+    "start": "node ./src/server.js",
     "pretest": "npm run lint",
     "test": "npm run test:jest --",
     "test:jest": "jest",
