@@ -2,9 +2,9 @@
 
 const request = require("supertest")
 
-const app = require("../../api/app")
+const app = require("../../src/app")
 
-jest.mock("../../api/services/hatchways", () => {
+jest.mock("../../src/services/hatchways", () => {
   return { getBlogPosts: () => [] }
 })
 

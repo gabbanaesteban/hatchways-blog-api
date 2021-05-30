@@ -1,7 +1,7 @@
 "use strict"
 
 const httpErros = require("http-errors")
-const errorMiddleware = require("../../../api/middlewares/error")
+const errorMiddleware = require("../../../src/middlewares/error")
 
 describe("error.js", () => {
   describe("notFound()", () => {
