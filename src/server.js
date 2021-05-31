@@ -5,5 +5,6 @@ const app = require('./app')
 const port = process.env.PORT || 3001
 
 app.listen(port, async () => {
-  console.log(`Listening at http://localhost:${port}`)
+  console.log(`Listening @ http://localhost:${port}`)
+  console.log(`Docs @ http://localhost:${port}/api-docs`)
 })

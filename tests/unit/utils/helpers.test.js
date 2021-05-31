@@ -1,6 +1,6 @@
 "use strict"
 
-const helpers = require("../../../api/utils/helpers")
+const helpers = require("../../../src/utils/helpers")
 const { BadRequest } = require("http-errors")
 
 describe("helpers.js", () => {

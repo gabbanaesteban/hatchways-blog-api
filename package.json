@@ -1,5 +1,6 @@
 {
   "name": "hatchways-backend-assessment",
+  "author": "Esteban De la Rosa <gabbanaesteban@gmail.com>",
   "engines": {
     "node": "14.x"
   },
@@ -7,7 +8,7 @@
     "src"
   ],
   "scripts": {
-    "start": "node api/server.js",
+    "start": "node ./src/server.js",
     "pretest": "npm run lint",
     "test": "npm run test:jest --",
     "test:jest": "jest",
@@ -16,15 +17,17 @@
     "lint": "eslint . --cache --fix",
     "format": "prettier --loglevel warn --write \"**/*.{js,css,md}\""
   },
-  "author": "Esteban De la Rosa <gabbanaesteban@gmail.com>",
   "dependencies": {
     "axios": "^0.21.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "helmet": "^4.6.0",
     "http-errors": "^1.8.0",
     "lodash": "^4.17.21",
     "node-cache": "^5.1.2",
+    "swagger-ui-express": "^4.1.6",
+    "yamljs": "^0.3.0",
     "yup": "^0.32.9"
   },
   "devDependencies": {

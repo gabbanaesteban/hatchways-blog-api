@@ -1,7 +1,7 @@
 "use strict"
 
-const service = require("../../../api/services/posts")
-const hatchways = require("../../../api/services/hatchways")
+const service = require("../../../src/services/posts")
+const hatchways = require("../../../src/services/hatchways")
 
 describe("posts.js", () => {
   let firstPost

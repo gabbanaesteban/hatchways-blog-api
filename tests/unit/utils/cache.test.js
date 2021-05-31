@@ -1,6 +1,6 @@
 "use strict"
 
-const cache = require("../../../api/utils/cache")
+const cache = require("../../../src/utils/cache")
 const NodeCache = require("node-cache")
 
 jest.mock("node-cache")

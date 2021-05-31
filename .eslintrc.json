@@ -6,5 +6,8 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2020
+  },
+  "rules": {
+    "node/no-unpublished-require": false
   }
 }

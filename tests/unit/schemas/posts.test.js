@@ -1,7 +1,7 @@
 "use strict"
 
-const { getPostsSchema } = require("../../../api/schemas/posts")
-const { validateParams } = require("../../../api/utils/helpers")
+const { getPostsSchema } = require("../../../src/schemas/posts")
+const { validateParams } = require("../../../src/utils/helpers")
 
 describe("posts.js", () => {
   describe("getPostsSchema", () => {
