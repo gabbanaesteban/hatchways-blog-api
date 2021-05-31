@@ -8,6 +8,6 @@
     "ecmaVersion": 2020
   },
   "rules": {
-    "node/no-unpublished-require": false
+    "node/no-unpublished-require": "off"
   }
 }
