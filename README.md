@@ -4,7 +4,8 @@ Node.js API which groups and filters blog posts from Hatchways API by Tags.
 [Guidelines](Guidelines.pdf)
 
 
-[![Tests](https://img.shields.io/github/workflow/status/gabbanaesteban/hatchways-blog-api/Tests?style=flat-square)](https://github.com/gabbanaesteban/hatchways-blog-api/actions/workflows/tests.yml)
+[![build](https://img.shields.io/github/workflow/status/gabbanaesteban/hatchways-blog-api/Tests?style=flat-square)](https://github.com/gabbanaesteban/hatchways-blog-api/actions/workflows/tests.yml)
+[![coverage](https://img.shields.io/codecov/c/github/gabbanaesteban/hatchways-blog-api?style=flat-square)](https://codecov.io/github/gabbanaesteban/hatchways-blog-api?branch=main)
 [![License](https://img.shields.io/github/license/gabbanaesteban/hatchways-blog-api?style=flat-square)](LICENSE.md)
 
 ## Requirements
