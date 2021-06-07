@@ -1,118 +1,147 @@
 {
-   "swagger": "2.0",
-   "info": {
-      "description": "This is an implmenetation of Hatchways Backend Assessment - Blog",
-      "version": "1.0.0",
-      "title": "Hatchways Backend Assessment API",
-      "contact": {
-         "email": "gabbanaesteban@gmail.com"
+   "swagger":"2.0",
+   "info":{
+      "description":"Node.js API which retrieves multiple blog posts from Hatchways API by Tags.",
+      "version":"1.0.0",
+      "title":"Hatchways Blog API",
+      "contact":{
+         "email":"gabbanaesteban@gmail.com"
       }
    },
-   "host": "hatchaways-assessment-api.herokuapp.com",
-   "basePath": "/api",
-   "tags": [
+   "host":"hatchaways-blog-api.herokuapp.com",
+   "basePath":"/api",
+   "tags":[
       {
-         "name": "Posts"
+         "name":"Posts"
+      },
+      {
+         "name":"Status"
       }
    ],
-   "schemes": [
+   "schemes":[
       "https"
    ],
-   "paths": {
-      "/posts": {
-         "get": {
-            "tags": [
+   "paths":{
+      "/posts":{
+         "get":{
+            "tags":[
                "Posts"
             ],
-            "summary": "Add a new pet to the store",
-            "description": "",
-            "produces": [
+            "summary":"Get blog posts based on tags.",
+            "description":"",
+            "produces":[
                "application/json"
             ],
-            "parameters": [
+            "parameters":[
                {
-                  "in": "query",
-                  "name": "tags",
-                  "required": true,
-                  "type": "string",
-                  "description": "A comma separated list of tags.",
-                  "example": "science,tech"
+                  "in":"query",
+                  "name":"tags",
+                  "required":true,
+                  "type":"string",
+                  "description":"A comma separated list of tags.",
+                  "example":"science,tech"
                },
                {
-                  "in": "query",
-                  "name": "sortBy",
-                  "type": "string",
-                  "description": "The field to sort the posts by. The acceptable fields are: id, reads, likes, popularity.",
-                  "example": "id"
+                  "in":"query",
+                  "name":"sortBy",
+                  "type":"string",
+                  "description":"The field to sort the posts by. The acceptable fields are: id, reads, likes, popularity.",
+                  "example":"id"
                },
                {
-                  "in": "query",
-                  "name": "direction",
-                  "type": "string",
-                  "description": "The direction for sorting. The acceptable fields are: desc, asc.",
-                  "example": "asc"
+                  "in":"query",
+                  "name":"direction",
+                  "type":"string",
+                  "description":"The direction for sorting. The acceptable fields are: desc, asc.",
+                  "example":"asc"
                }
             ],
-            "responses": {
-               "200": {
-                  "description": "Ok",
-                  "schema": {
-                     "$ref": "#/definitions/Post"
+            "responses":{
+               "200":{
+                  "description":"Ok",
+                  "schema":{
+                     "$ref":"#/definitions/Post"
                   }
                },
-               "400": {
-                  "description": "Bad Request",
-                  "schema": {
-                     "$ref": "#/definitions/BadRequest"
+               "400":{
+                  "description":"Bad Request",
+                  "schema":{
+                     "$ref":"#/definitions/BadRequest"
                   }
-               }
-            }
-         }
-      }
-   },
-   "definitions": {
-      "Post": {
-         "type": "object",
-         "properties": {
-            "id": {
-               "type": "integer",
-               "example": 1
-            },
-            "author": {
-               "type": "string",
-               "example": "Rylee Paul"
-            },
-            "authorId": {
-               "type": "integer",
-               "example": 9
-            },
-            "likes": {
-               "type": "integer",
-               "example": 960
-            },
-            "popularity": {
-               "type": "number",
-               "example": 0.96
-            },
-            "reads": {
-               "type": "number",
-               "example": 560
-            },
-            "tags": {
-               "type": "array",
-               "items": {
-                  "type": "string",
-                  "example": "tech"
                }
             }
          }
       },
-      "BadRequest": {
-         "type": "object",
-         "properties": {
-            "error": {
-               "type": "string",
-               "example": "tags is required"
+      "/ping":{
+         "get":{
+            "tags":[
+               "Status"
+            ],
+            "summary":"Return true if the service is up and running",
+            "description":"",
+            "produces":[
+               "application/json"
+            ],
+            "responses":{
+               "200":{
+                  "description":"Ok",
+                  "schema":{
+                     "type":"object",
+                     "properties":{
+                        "success":{
+                           "type":"boolean",
+                           "example":true
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   },
+   "definitions":{
+      "Post":{
+         "type":"object",
+         "properties":{
+            "id":{
+               "type":"integer",
+               "example":1
+            },
+            "author":{
+               "type":"string",
+               "example":"Rylee Paul"
+            },
+            "authorId":{
+               "type":"integer",
+               "example":9
+            },
+            "likes":{
+               "type":"integer",
+               "example":960
+            },
+            "popularity":{
+               "type":"number",
+               "example":0.96
+            },
+            "reads":{
+               "type":"number",
+               "example":560
+            },
+            "tags":{
+               "type":"array",
+               "items":{
+                  "type":"string",
+                  "example":"tech"
+               }
+            }
+         }
+      },
+      "BadRequest":{
+         "type":"object",
+         "properties":{
+            "error":{
+               "type":"string",
+               "example":"tags is required"
             }
          }
       }
