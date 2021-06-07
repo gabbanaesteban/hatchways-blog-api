@@ -8,7 +8,7 @@
          "email":"gabbanaesteban@gmail.com"
       }
    },
-   "host":"hatchaways-blog-api.herokuapp.com",
+   "host":"hatchways-blog-api.herokuapp.com",
    "basePath":"/api",
    "tags":[
       {
@@ -60,7 +60,15 @@
                "200":{
                   "description":"Ok",
                   "schema":{
-                     "$ref":"#/definitions/Post"
+                     "type": "object",
+                     "properties":{
+                        "posts": {
+                           "type": "array",
+                           "items":{
+                              "$ref":"#/definitions/Post"
+                           }
+                        }
+                     }
                   }
                },
                "400":{
