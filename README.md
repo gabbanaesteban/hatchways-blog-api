@@ -1,33 +1,37 @@
-# Hatchways Backend Assessment
+# Hatchways Blog API
+
+Node.js API which groups and filters blog posts from Hatchways API by Tags.  
+[Guidelines](Guidelines.pdf)
+
+
+[![Tests](https://img.shields.io/github/workflow/status/gabbanaesteban/hatchways-blog-api/Tests?style=flat-square)](https://github.com/gabbanaesteban/hatchways-blog-api/actions/workflows/tests.yml)
+[![License](https://img.shields.io/github/license/gabbanaesteban/hatchways-blog-api?style=flat-square)](LICENSE.md)
 
 ## Requirements
 
-Node >= 14
+- Node >= 14.x
+## Installation 
 
-## Setup
-
-``` bash
-npm ci
+```bash 
+  npm ci
+  npm start
 ```
+    
+## Running Tests
 
-``` bash
-npm start
-```
-
-## Basic Usage
-
-```bach
-curl 'http://localhost:3001/api/ping'
-```
-
-## Testing
-
-You can run the tests with:
+To run tests, run the following command
 
 ```bash
-npm run test:coverage
+  npm test
 ```
 
-## Credits
+## Usage/Examples
 
-- [Esteban De la Rosa](https://github.com/gabbanaesteban)
+[Documentation](https://hatchways-blog-api.herokuapp.com/api-docs/)
+## Author
+
+[Esteban De la Rosa](https://www.github.com/gabbanaesteban)
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
