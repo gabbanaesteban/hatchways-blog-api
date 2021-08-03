@@ -1,9 +1,8 @@
 "use strict"
 
 import { Router } from "express"
-
-const postsRoutes = require("./posts")
-const { notFound, errorHandler } = require("../middlewares/error")
+import postsRoutes from "./posts"
+import { notFound, errorHandler } from "../middlewares/error"
 
 const router = Router()
 

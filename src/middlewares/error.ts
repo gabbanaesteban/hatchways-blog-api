@@ -1,6 +1,6 @@
 "use strict"
 
-const httpErrors = require("http-errors")
+import httpErrors from "http-errors"
 
 function notFound(req, res, next) {
   const error = new httpErrors.NotFound(`Not Found - ${req.originalUrl}`)
@@ -17,6 +17,4 @@ function errorHandler(error, req, res, next) {
   })
 }
 
-const API = { notFound, errorHandler }
-
-module.exports = API
+export { notFound, errorHandler }
