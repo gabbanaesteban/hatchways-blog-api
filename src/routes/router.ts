@@ -1,6 +1,7 @@
 "use strict"
 
-const { Router } = require("express")
+import { Router } from "express"
+
 const postsRoutes = require("./posts")
 const { notFound, errorHandler } = require("../middlewares/error")
 
@@ -15,4 +16,4 @@ router.use("/ping", (req, res) => {
 router.use(notFound)
 router.use(errorHandler)
 
-module.exports = router
+export default router

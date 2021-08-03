@@ -1,8 +1,8 @@
 "use strict"
 
-const yup = require("yup")
+import yup from "yup"
 
-const getPostsSchema = yup.object().shape({
+export const getPostsSchema = yup.object().shape({
   tags: yup.string().required("tags parameter is required"),
   sortBy: yup
     .string()
@@ -16,7 +16,3 @@ const getPostsSchema = yup.object().shape({
     .oneOf(["asc", "desc"], "direction parameter is invalid")
     .default("asc"),
 })
-
-const API = { getPostsSchema }
-
-module.exports = API

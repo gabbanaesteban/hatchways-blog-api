@@ -1,6 +1,6 @@
 "use strict"
 
-const httpErrors = require("http-errors")
+import httpErrors from "http-errors"
 
 async function validateParams(params, schema, validationOptions = {}) {
   const options = {
@@ -18,8 +18,4 @@ async function validateParams(params, schema, validationOptions = {}) {
   }
 }
 
-const API = {
-  validateParams,
-}
-
-module.exports = API
+export { validateParams }
