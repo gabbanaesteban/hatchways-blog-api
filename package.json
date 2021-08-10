@@ -5,7 +5,8 @@
     "src"
   ],
   "scripts": {
-    "start": "node ./src/server.js",
+    "start": "node ./build/server.js",
+    "dev": "esmon ./src/server.ts",
     "pretest": "npm run lint && tsc --noEmit",
     "test": "npm run test:jest --",
     "test:jest": "jest",
@@ -35,7 +36,7 @@
     "eslint": "^7.27.0",
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-node": "^11.1.0",
-    "esmon": "^1.0.3",
+    "esmon": "^1.0.4",
     "jest": "^27.0.6",
     "supertest": "^6.1.3",
     "ts-jest": "^27.0.4",

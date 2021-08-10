@@ -17,4 +17,4 @@ app.use(cors())
 app.use("/api", router)
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
-module.exports = app
+export default app

@@ -1,6 +1,6 @@
 'use strict'
 
-const app = require('./build/app')
+import app from './app'
 
 const port = process.env.PORT || 3001
 
