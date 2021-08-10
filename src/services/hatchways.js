@@ -1,10 +1,10 @@
-"use strict"
+'use strict'
 
-import util from "util"
-import axios from "axios"
-import * as cache from "../utils/cache"
+import util from 'util'
+import axios from 'axios'
+import * as cache from '../utils/cache.js'
 
-const API_URL = "https://api.hatchways.io/assessment/blog/posts?tag=%s"
+const API_URL = 'https://api.hatchways.io/assessment/blog/posts?tag=%s'
 const ONE_HOUR_IN_SECONDS = 3600
 
 /**
@@ -50,6 +50,4 @@ function _addBlogPostsToCache(tag, posts) {
   return cache.getCache().set(tag, posts, ONE_HOUR_IN_SECONDS)
 }
 
-export {
-  getBlogPosts,
-}
+export { getBlogPosts }

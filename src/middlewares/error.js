@@ -1,6 +1,6 @@
-"use strict"
+'use strict'
 
-import httpErrors from "http-errors"
+import httpErrors from 'http-errors'
 
 function notFound(req, res, next) {
   const error = new httpErrors.NotFound(`Not Found - ${req.originalUrl}`)
@@ -13,7 +13,7 @@ function errorHandler(error, req, res, next) {
 
   res.json({
     error: error.message,
-    stack: process.env.NODE_ENV === "production" ? null : error.stack,
+    stack: process.env.NODE_ENV === 'production' ? null : error.stack
   })
 }
 

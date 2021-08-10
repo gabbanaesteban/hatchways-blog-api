@@ -1,12 +1,12 @@
-"use strict"
+'use strict'
 
-import httpErrors from "http-errors"
+import httpErrors from 'http-errors'
 
 async function validateParams(params, schema, validationOptions = {}) {
   const options = {
     abortEarly: true, // We dont want to aggregate validation errors
     stripUnknown: true,
-    ...validationOptions,
+    ...validationOptions
   }
 
   try {
